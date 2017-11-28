@@ -1,4 +1,8 @@
+generated
+build
 *.FASL
+*.fsl.1
+*.fsl.2
 *.fasl
 *.lisp-temp
 *.dfsl
