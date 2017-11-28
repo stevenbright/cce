@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>apiplay</groupId>
+  <artifactId>apiplay</artifactId>
+  <version>0.1.8-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>Apiplay Project Root</name>
+
+  <modules>
+    <module>apiplay-cli</module>
+  </modules>
+
+  <properties>
+    <!--  compiler settings -->
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+
+    <!-- encoding -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
+
+  <repositories>
+    <repository>
+      <id>api-v1-client-java-mvn-repo</id>
+      <url>https://raw.githubusercontent.com/blockchain/api-v1-client-java/mvn-repo/</url>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </repository>
+  </repositories>
+
+  <dependencyManagement>
+
+    <dependencies>
+
+      <!-- BTC API -->
+      <dependency>
+        <groupId>info.blockchain</groupId>
+        <artifactId>api</artifactId>
+        <version>2.0.0</version>
+      </dependency>
+
+      <!-- FindBugs - JSR-305 for @Nonnull etc. -->
+      <dependency>
+        <groupId>com.google.code.findbugs</groupId>
+        <artifactId>jsr305</artifactId>
+        <version>3.0.1</version>
+      </dependency>
+
+      <!-- Test scope -->
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.12</version>
+        <scope>test</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>
+
